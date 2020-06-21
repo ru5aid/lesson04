@@ -14,6 +14,7 @@ showTypeof(addExpenses);
 showTypeof(deposit);
 
 console.log(addExpenses.toLowerCase().split(', '));
+console.log(typeof deposit);
 
 let expenses1 = prompt('Введите обязательную статью расходов?','car');
 let amount1 = +prompt('Во сколько это обойдется?','700');
@@ -25,17 +26,12 @@ console.log(amount1);
 console.log(expenses2);
 console.log(amount2);
 
-let getAccumulatedMonth = function(amount1, amount2){
-    return money - (amount1 + amount2);
-    
-}
-let  accumulatedMonth = function getAccumulatedMonth(){
-    console.log();
-    
+let getAccumulatedMonth = function(money, amount1, amount2){
+    return money -  (amount1 + amount2);
 };
-accumulatedMonth();
+let accumulatedMonth = getAccumulatedMonth(1200, 700, 400);
 
-console.log( getAccumulatedMonth(700, 400) );
+console.log(accumulatedMonth);
 
 
 let mission = 4500;
@@ -66,6 +62,5 @@ let getExpensesMonth = function(amount1, amount2){
 let getTargetMonth = function(mission, accumulatedMonth){
     return mission / accumulatedMonth;
 }
-
-console.log( getExpensesMonth(700, 400) );
-console.log( getTargetMonth(4500, 100));
+getExpensesMonth();
+getTargetMonth();
